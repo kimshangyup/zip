@@ -1,0 +1,63 @@
+
+{% extends 'emily_layout.html' %}
+
+{% block head %}
+  <style>
+
+  .space {
+    height: 50px;
+  }
+  .navbar-brand {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px
+  }
+  .form-group {
+    padding: 0px;
+  }
+    .right-align {
+    float: right !important;"
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .date {
+    color: #999999;
+  }
+  .subtitle {
+    background-color: #b364d7;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  @media screen {
+    .row {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+  }
+  </style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="col-xs-6 col-xs-offset-3">
+    <h3>지금 에밀리에 가입하세요!</h3>
+    <input type="text" class="form-control" placeholder="ID">
+    <input type="text" class="form-control" placeholder="Password">
+    <!--checkbox-->
+    <input type="text" class="form-control" placeholder="서울대학생입니다">
+    <button type="submit" class="btn btn-default">회원가입</button>
+    <button type="submit" class="btn btn-default">로그인</button>
+  </div>
+</div>
+
+<div class="space"/>
+
+{% endblock %}

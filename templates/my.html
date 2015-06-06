@@ -1,0 +1,110 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<title>학생 소셜벤처</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700|Shadows+Into+Light|Indie+Flower' rel='stylesheet' type='text/css'>
+	<style>
+	
+	a{
+		color:#000099;
+	}
+	.navbar-default{
+		background-image:linear-gradient(to bottom,#23b300,0,#23b300 100%);
+	}
+	.navbar-default .navbar-nav>li>a{
+				color:white;
+	}
+	.navbar-default .navbar-nav>li>a:hover{
+		color:yellow;
+	}
+	body{
+		background-color:#f9f9f9;
+	}
+	.col-md-4{
+		margin-top:50px;
+	}
+	.navbar-default .navbar-brand{
+		color:white;
+	}
+	.navbar-default .navbar-brand:hover{
+		color:yellow;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color:white;
+
+	}
+	.panel-body:hover{
+		background-color:gray;
+	}
+	li{
+		list-style-type: none;
+		display:inline-block;
+	}
+	.col-md-12{
+		background-color: #92d050;
+
+	}
+	li>a{
+		color:white;
+		margin-left:40px;
+	}
+	a{
+		color:darkgray;
+	}
+	ul{
+		color:white;
+	}
+</style>
+</head>
+<body>
+<div class="col-md-offset-2">
+<h3><strong>대학생 소셜벤처 네트워크</strong></h3>
+</div>
+<div class="col-md-12">
+	
+<br>
+
+<ul>
+	<li><a href="/you/">소셜벤처 둘러보기</a></li>
+	<li><a href="/my/">프로젝트 만들기</a></li>
+	<li><a href="javascript:alert('준비중입니다')">학생 소셜벤처란?</a></li>
+
+</ul>
+
+</div>
+<hr>
+
+<div class="col-md-8 col-md-offset-2">
+<br>
+
+<h1>프로젝트 등록하기</h1>
+
+<form action="/register/" method="POST" class="form-group">
+	<label for="title">프로젝트명:</label><input class="form-control" type="text" id="title" name="title"><br>
+	<label for="text1">한줄소개:</label><input class="form-control" type="text" id="text1" name="text1"><br>
+	<label for="text2">상세소개:</label><textarea class="form-control" name="text2" id="text2" cols="30" rows="10"></textarea><br>
+	<label for="contact">연락처:</label><input class="form-control" type="text" id="contact" name="contact"><br>
+	<button type="submit" class="btn btn-default">등록</button>
+</form>
+
+
+</div>
+
+
+</body>
+</html>

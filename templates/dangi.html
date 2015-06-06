@@ -1,0 +1,60 @@
+{% extends 'zip_layout.html' %}
+
+{% block body %}
+<div id="left" class="col-md-6">
+
+<div id="filter">
+<br>
+위치 <span class="active">서울대입구역</span>  <span>신림9동</span>  <span>신림2동</span>  <span>낙성대</span>
+<hr>
+날짜 <span>시작일</span> <span>종료일</span>
+<hr>
+숙소 유형<span class="active">오피스텔</span> <span>잠자는방</span> <span>원룸</span> <span>투룸</span> <span>하숙</span>
+<hr>
+옵션 <span>풀옵션</span> <span class="active">노옵션</span> <span>침대 있음</span> <span>침대, 에어컨, 냉장고 있음</span>
+<hr>
+월세 범위 <span>30만원 이하</span>
+<span>30만원~ 50만원</span>
+<span class="active">50만원~70만원</span>
+<span>70만원 이상</span>
+<hr><br>
+</div>
+
+
+
+
+
+{% for i in r %}
+<div class="col-md-6">
+<div class="thumbnail">
+<h3>{{i.name}}</h3>
+<a href="/zip/{{i.id}}"><img src="/static/z{{i.id}}.jpg" alt=""></a>
+<div class="caption">
+월세:{{i.price}}원/월<br>
+위치:{{i.address}}<br>
+기간:{{i.startdate}}~{{i.enddate}}<br>
+유형:{{i.kind}}<br>
+옵션:{{i.option}}<br>
+기타:{{i.etc}}
+</div>
+</div>
+</div>
+{% endfor %}
+ 
+</div>
+
+
+
+
+<div id="right" class="col-md-6">
+	
+
+<div id="map_canvas"style="width:100%; height:650px;"> </div> 
+</div>
+
+
+
+</div>
+
+
+{% endblock %}

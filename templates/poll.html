@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<style>
+	
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+
+
+
+
+
+<!--<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+-->
+		{% for i in q %}
+
+	<div class="col-md-3">
+		<div class="panel panel-default">
+			<div class="panel-body">
+
+		<h4>{{i.title}}</h4>
+		<form action="/choice/{{i.id}}/" method="POST">
+			{% for choice in c %}
+				{% ifequal choice.questions.id i.id %}
+		<label for="{{choice.options}}">{{choice.options}}</label><input type="radio" name="poll" id="{{choice.options}}" value="{{choice.id}}" >
+				{% endifequal %}
+			{% endfor %}<br>
+
+			<button id="b{{forloop.counter}}" type="submit" class="btn btn-default">투표하기</button>
+		</form>
+	
+	현재까지 스코어:<br>
+		{% for choice in c %}
+			{% ifequal choice.questions.id i.id %}
+			<div>
+				{{choice.options}}<br> <div class="number{{i.id}}" id="s{{choice.id}}">{{choice.selected}}</div><br>
+			</div>
+		
+			{% endifequal %}
+		{% endfor %}
+		<script type="text/javascript">
+		var a=document.getElementsByClassName("number{{i.id}}");
+		var sum=0;
+		for(i=0;i<a.length;i++){
+		sum+=Number(a[i].innerHTML);
+		}
+		for(i=0;i<a.length;i++){
+			a[i].innerHTML=Math.round(Number(a[i].innerHTML)/sum*100,2)+'%';
+			a[i].setAttribute('style','width:'+a[i].innerHTML+'; border:1px solid lightgray;');
+		}
+
+		</script>
+			</div>
+		</div>	
+	</div>
+	{% endfor %}
+
+<!--
+<script type="text/javascript">
+$(document).ready(function(){
+
+var submit = function(){
+		var title=$('#title').val()
+		var text=$('#text').val()
+		var category=$('#category').val()
+		$.ajax({
+			type:'POST',
+			url:'/write/',
+			data:{title:title,text:text,category:category},
+			success:function(){
+				alert('글이 작성되었습니다');
+
+			},
+			error:function(){
+				alert('글 작성에 실패하였습니다');
+			}
+		})
+	}
+
+	$('#submitb').on('click',submit);
+
+
+	)
+</script>
+-->
+{% endblock %}
+

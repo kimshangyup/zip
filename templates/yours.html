@@ -1,0 +1,113 @@
+<html>
+<head>
+	
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<style>
+	
+	a{
+		color:#000099;
+	}
+	.navbar-default{
+		background-image:linear-gradient(to bottom,#23b300,0,#23b300 100%);
+	}
+	.navbar-default .navbar-nav>li>a{
+				color:white;
+	}
+	.navbar-default .navbar-nav>li>a:hover{
+		color:yellow;
+	}
+	body{
+		background-color:#f9f9f9;
+	}
+	.col-md-4{
+		margin-top:50px;
+	}
+	.navbar-default .navbar-brand{
+		color:white;
+	}
+	.navbar-default .navbar-brand:hover{
+		color:yellow;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color:white;
+
+	}
+	.panel-body:hover{
+		background-color:gray;
+	}
+	li{
+		list-style-type: none;
+		display:inline-block;
+	}
+	.col-md-12{
+		background-color: #92d050;
+
+	}
+	li>a{
+		color:white;
+		margin-left:40px;
+	}
+	a{
+		color:darkgray;
+	}
+	ul{
+		color:white;
+	}
+</style>
+
+
+</head>
+<body>
+	
+<div class="col-md-offset-2">
+<h3><strong>대학생 소셜벤처 네트워크</strong></h3>
+</div>
+<div class="col-md-12">
+	
+<br>
+
+<ul>
+	<li><a href="/you/">소셜벤처 둘러보기</a></li>
+	<li><a href="/my/">프로젝트 만들기</a></li>
+	<li><a href="javascript:alert('좌측 등록 란에서 등록해주세요!')">학생 소셜벤처란?</a></li>
+
+</ul>
+
+</div>
+
+<hr>
+
+<div class="col-md-8 col-md-offset-2">
+
+
+
+
+{% for i in cb %}
+<h1>{{i.title}}</h1>
+
+<h3>{{i.text1}}</h3>
+
+<p>{{i.text2}}</p>
+
+<h4>연락처){{i.contact}}</h4>
+<button class="btn btn-default">기부하기</button>
+{% endfor %}
+
+</div>
+</body>
+</html>
+
+
+	

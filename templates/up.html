@@ -1,0 +1,42 @@
+{% extends 'zip_layout.html' %}
+{% block body %}
+
+<div class="main">
+
+<div class="col-md-3">
+	<img src="/static/z1.jpg" alt=""><br>
+	<button class="btn btn-default">업로드</button>
+</div>
+<div class="col-md-5">	
+<form action="/zip/upload" method="POST">
+	제목:<input type="text" class="form-control" name="name"><br>
+	주소:<input type="text" class="form-control" name="address"><br>
+	월세:<input type="text" class="form-control" name="price"><br>
+	시작일:<input type="text" class="form-control" name="startdate"><br>
+	종료일:<input type="text" class="form-control" name="enddate"><br>
+	유형:<input type="text" class="form-control" name="kind"><br>
+	옵션:<input type="text" class="form-control" name="option"><br>
+	하고싶은말:<input type="text" class="form-control" name="etc"><br>
+	<button type="submit" class="btn btn-primary">올리기</button>
+</form>
+
+</div>
+
+<div class="col-md-4">
+	
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h3>집토스 업로드 가이드</h3>
+			<p>1. 사진을 3장 이상 올린다<br>
+				2. 월세를 정하고 광고 문구를 올린다<br>
+				3. 시작일과 종료일을 정한다
+			</p>
+					<h3>주의사항</h3>
+
+		</div>
+	</div>
+</div>
+
+</div>
+
+{% endblock %}

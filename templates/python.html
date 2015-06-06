@@ -1,0 +1,143 @@
+<html>
+<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link href='http://fonts.googleapis.com/css?family=Poiret+One|Quicksand' rel='stylesheet' type='text/css'>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href='http://fonts.googleapis.com/css?family=Exo|Exo+2|Play' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='http://api.mobilis.co.kr/webfonts/v2/css/BM-HANNAWeb'
+        rel='stylesheet' type='text/css' />
+
+
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Poiret+One|Quicksand);
+img{
+	width:50px;
+
+}
+.length{
+	height:20px;
+	width:150px;
+	background-color:red;
+	float;left;
+	margin:auto 0;
+}
+.container{
+	text-align: center;
+}
+.col-md-3{
+	text-align: center;
+}
+#landing{
+	background-image:url('/static/brand1.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:100%;
+	height:700px;
+	border: 1px solid black;
+	text-align: center;
+	padding-top:280px;
+}
+h1{
+	color:white;
+	font-size:48px;
+	font-family: 'Poiret One', cursive;
+}
+h2{
+	font-family: 'Poiret One', cursive;
+	margin-top:40px;
+}
+.fa{
+	font-size:84px;
+}
+#logo{
+	color:white;
+}
+.row1{
+	background-color: #eeeeee;
+	padding:70px;
+}
+#bb{
+	width:80%;
+}
+#search{
+	color:white;
+	font-size:20px;
+	display: inline-block;
+	margin-top:10px;
+}
+a{
+	color:black;
+}
+a:hover{
+	text-decoration: none;
+	color:gray;
+}
+
+	</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+function my(){
+
+	if($('#text').val()=='starbucks'||$('#text').val()=='nescafe'||$('#text').val()=='coffeebean'||$('#text').val()=='pascucci'){
+		window.open('/python/1');
+		}
+		else{
+	alert('You should join us first!');		
+		}
+	
+}
+
+
+$('#search').on('click',my);
+})
+
+
+</script>
+
+<div id="landing"><h1>Check out your Brand's MIND SHARE!</h1><br><br><br><input type="text" id="text" style="width:240px; margin:auto;" placeholder="Search your brand..." class="form-control"><i id="search" class="fa fa-search"></i></div>
+	<div class="container">
+
+<div class="row">
+<h2>What we provide</h2>
+<Br>
+<div class="col-md-4"><i class="fa fa-twitter"></i><p>Nowadays what matters most is mind share, not market share</p></div>
+<div class="col-md-4"><i class="fa fa-bolt"></i><p>We provide real time report every day</p></div>
+<div class="col-md-4"><i class="fa fa-pie-chart"></i><p>Compared with your competitor, you can win the market!</p></div>
+<hr>
+</div>
+
+
+<a href="/python/1"><div class="row1">
+	<h2>Wanna see Mindshare for Coffee Brand?</h2><br>
+<img src="/static/p1.png" alt="">
+<img src="/static/p2.jpg" alt="">
+<img src="/static/p5.png" alt="">
+<img src="/static/p4.png" alt="">
+</div>
+</a>
+	<div class="row">
+<h2>Our customer</h2>
+<Br>
+<img id="bb" src="/static/bb.jpg" alt="">
+</div>
+
+
+</body>
+</html>

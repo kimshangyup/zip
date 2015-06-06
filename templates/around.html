@@ -1,0 +1,32 @@
+{% extends 'buddy.html' %}
+
+
+{% block head%}
+<style>
+body{
+	background-color: #9bbad8;
+}
+	.panel-body{
+		background-color:white;
+	}
+
+</style>
+{% endblock %}
+{% block body %}
+
+<h2>둘러보기</h2>
+
+{% for i in d %}
+<div class="panel panel-default">
+	<div class="panel-body">
+<img src="/static/people.JPG" alt="">Hi, my name is {{i.name}}, and I am {{i.age}} years old.
+I live in {{i.address}}
+I want to meet {{i.preference}}
+It will be pleasure to be a friend with you! Please contact me 
+	
+	</div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

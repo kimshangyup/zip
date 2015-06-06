@@ -1,0 +1,70 @@
+<html>
+<head>
+	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<link href='http://api.mobilis.co.kr/webfonts/v2/css/BM-HANNAWeb'
+        rel='stylesheet' type='text/css' />
+
+        <!--한나체 추가-->
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/hanna.css"/>
+
+<style>
+	ul,ul>li{
+		display:inline-block;
+	}
+#head{ 
+     font-family: "Hanna", "NanumGothic", sans-serif ;
+     font-size: 42px;
+}
+#header{
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+.container{
+	background-color: #eeeeee;
+	padding:20px;
+}
+a{
+	color:black;
+}
+a:hover{
+	text-decoration: none;
+	color:gray;
+}
+</style>
+{% block head %}
+{% endblock %}
+</head>
+<body>
+
+<div id="header">
+	<a href="/poll/"><span id="head">찍신- 찍어서 맞춰라</span></a>
+<ul>
+	<li><a href="/write/">new vote</a></li>
+	<li><a href="">b</a></li>
+	<li><a href="">c</a></li>
+	<li><a href="">d</a></li>
+</ul>
+</div>
+
+<div class="container">
+{% block body %}
+
+{% endblock %}
+
+</div>
+
+</body>
+</html>

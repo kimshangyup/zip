@@ -1,0 +1,328 @@
+
+<html>
+<head>
+
+	 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+ <script> 
+  function initialize() { 
+  var myLatlng = new google.maps.LatLng(37.466438, 126.959532); 
+  var mapOptions = { 
+        zoom: 1, 
+        center: myLatlng, 
+        mapTypeId: google.maps.MapTypeId.ROADMAP 
+  } 
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+  } 
+ </script> 
+
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<link href='http://api.mobilis.co.kr/webfonts/v2/css/BM-HANNAWeb'
+        rel='stylesheet' type='text/css' />
+
+	<title>동문 후배들의 프로젝트에 투자하세요!</title>
+<style>
+	a{
+		color:black;
+		font-size:14px;
+		padding:7px;
+	}
+	@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+
+	#header>a:hover, #header>li>a:hover{
+		color:white;
+		text-decoration: none;
+		border-bottom: 3px solid white;
+	}
+
+	body{
+		background-color: #ffffff;
+	}
+	li{
+		list-style-type: none;
+		display:inline-block;
+	}
+	#title{
+		font-size:32px;
+				font-family: 'Indie Flower', cursive;
+	}
+	
+	#header{
+		margin-top:1%;
+		text-align:center;
+		width:100%;
+		position:fixed;
+		z-index:2;
+		padding:0px;
+		padding-bottom:2%;
+	}
+	
+	.row1,.row2,.row3{
+		height:auto;
+	}
+	.row1{
+		background-color:#eeeeee;
+
+	}
+	.row2{
+		background-color: #cccccc;
+	}
+	.row3{
+		background-color: #aaaaaa;
+		color:white;
+	}
+	#footer{
+		height:50px;
+		width:100%;
+		background-color:#4b4b4b;
+		padding:10px;
+		color:white;
+		position:fixed;
+		bottom:0;
+		text-align:center;
+	}
+
+	span, .fa{
+		font-size:84px;
+	}
+	#footer>.fa{
+		font-size:24px;
+
+	}
+	img{
+		width:160px;
+	}
+	p{
+		font-size:14px;
+	}
+	#more{
+		font-size:12px;
+	}
+	.left{
+		float:left;
+	}
+	.clear{
+		clear:both;
+	}
+	#image{
+		width:60%;
+	}
+	.navbar-default{
+		background-image:linear-gradient(to bottom,#92d050 0,#92d050 100%);
+		color:white;
+	}
+	.navbar-default .navbar-brand{
+		color:white;
+	}
+	.navbar-default .navbar-nav>li>a{
+		color:white;
+	}
+	.nav>li>a:hover, .nav>li>a:focus{
+		background-color: #00b4e9;
+		color:white;
+	}
+	#logo{
+		width:80px;
+		margin-top:-20px;
+		
+	}
+	#img{
+		background-image:url('/static/yy.jpg');
+		background-size:100%;
+		background-repeat: no-repeat;
+		color:white;
+		height:600px;
+		margin-top:-30px;
+		text-align: center;
+		padding:200px;
+	}
+	.navbar-default{
+		border-color:#92d050;
+	}
+</style>
+
+
+</head>
+
+<body onload="initialize()">
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><strong>soWE</strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">처음이신가요?</a></li>
+
+        
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="어디로 여행가세요?">
+        </div>
+        <button type="submit" class="btn btn-default">둘러보기</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">로그인</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">관련 사이트 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">에어비앤비</a></li>
+            <li><a href="#">마이리얼트립</a></li>
+            <li><a href="#">위시빈</a></li>
+            <li class="divider"></li>
+            <li><a href="#">트레일패스</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div id="img">
+	<h1>더 나은 세상을 향해 한 걸음씩 나아가는<br> 후배들을 지지해주세요!<br><br>
+</div>
+
+<div>
+<div class="col-md-2">
+
+<ul class="nav nav-pills nav-stacked">
+  <li role="presentation"><a href="#">서울대학교</a></li>
+  <li role="presentation"><a href="#">연세대학교</a></li>
+  <li role="presentation"><a href="#">고려대학교</a></li>
+
+</ul>	
+
+</div>
+
+
+<div class="col-md-10">
+	<h3>추천 영상<a id="more" href="">더 보기</a></h3>
+
+<div class="col-md-2">
+
+<img src="/static/y1.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y2.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y3.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+
+<hr>
+
+<h3>인기 영상<a id="more" href="">더 보기</a></h3>
+<div class="col-md-2">
+
+<img src="/static/y1.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y2.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y3.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+<div class="col-md-2">
+
+<img src="/static/y4.jpg" alt=""><br><a href="">루브르 박물관</a><br>게시자: 정동휘<br>1개월 전 조회수 194회<br>루브르 박물관의 저녁 모습을 촬영했습니다
+</div>
+
+
+
+
+<h3>파트너스</h3>
+
+<img id="image" src="/static/partner.bmp" alt="">
+
+
+<h3>찾아오시는 길</h3>
+
+
+</div>
+
+
+
+<br>
+<br><br>
+
+
+
+<div id="footer">
+	
+	<i class="fa fa-twitter"></i>&nbsp;	
+	<i class="fa fa-facebook-official"></i>&nbsp;
+	<i class="fa fa-linkedin"></i>
+</div>
+
+</body>
+</html>

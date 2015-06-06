@@ -1,0 +1,77 @@
+ 
+{% extends 'emily_layout.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+  <div class="row chat-back">
+    <div class="col-xs-12 dropdown"><!-- title and step-back-->
+      <h4 class="subtitle"> 채팅방 제목
+        <a href="emily_chatlist.html" style="color:white;">
+          <span style="float: left;" class="glyphicon glyphicon-menu-left"/>
+        </a>
+        <span class="glyphicon glyphicon-cog btn btn-default dropdown-toggle" data-toggle="dropdown">
+        </span>
+        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation"><a role="menuitem" href="#">
+            <span class="glyphicon glyphicon-plus">
+          </a></li>
+          <li role="presentation"><a role="menuitem" href="#">제목 바꾸기</a></li>
+          <li role="presentation"><a role="menuitem" href="#">설정(배경,폰트)</a></li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-xs-9 col-xs-offset-3 mychat"><!-- my chat-->
+      <div class="col-xs-12">
+        <h5 class="chatname">에밀리 6호</h5>
+      </div>
+      <div class="col-xs-12">
+        <p class="chatbox-girl"> 여자 채팅 포맷입니다 가나다라마바사아자차카파타하</p>
+        <img class="chatface" src="/static/emily_icon.png"></img>
+      </div>
+      <div class="col-xs-12">
+        <p style="margin-right: 10px;">2014.04.24 13:24</p>
+      </div>
+    </div><!--end of one chat-->
+    <div class="col-xs-9 col-xs-offset-3 mychat"><!-- my chat-->
+      <div class="col-xs-12">
+        <h5 class="chatname">에밀리 3호</h5>
+      </div>
+      <div class="col-xs-12">
+        <p class="chatbox-boy"> 남자 채팅 포맷입니다</p>
+        <img class="chatface" src="/static/emily_iconboy.png"></img>
+      </div>
+      <div class="col-xs-12">
+        <p style="margin-right: 10px;">2014.04.24 13:24</p>
+      </div>
+    </div><!--end of one chat-->
+    <div class="col-xs-9 yourchat"><!-- your chat-->
+      <div class="col-xs-12">
+        <h5 class="chatname">여행자 1호</h5>
+      </div>
+      <div class="col-xs-12">
+        <p class="chatbox-girl"> 여자 채팅 포맷입니다</br>반응형 채팅 풍선</p>
+        <img class="chatface" src="/static/emily_icon.png"></img>
+      </div>
+      <div class="col-xs-12">
+        <p style="margin-right: 10px;">2014.04.24 13:24</p>
+      </div>
+    </div><!--end of one chat-->
+    <div class="col-xs-9 yourchat"><!-- your chat-->
+      <div class="col-xs-12">
+        <h5 class="chatname">에밀리 1호</h5>
+      </div>
+      <div class="col-xs-12">
+        <p class="chatbox-boy"> 남자 채팅 포맷입니다</p>
+        <img class="chatface" src="/static/emily_iconboy.png"></img>
+      </div>
+      <div class="col-xs-12">
+        <p style="margin-right: 10px;">2014.04.24 13:24</p>
+      </div>
+    </div><!--end of one chat-->
+  </div>
+</div>
+
+<div class="space"/>
+
+{% endblock %}

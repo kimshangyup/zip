@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+
+<form action="/write/new/" class="form-group" method='POST'>{% csrf_token %}
+	<label for="question">투표 제목:</label><input id="question" name="question" class="form-control" type="text">
+	<label for="choice1">선택지1:</label><input id="choice1" name="choice1" class="form-control" type="text">
+	<label for="choice2">선택지2:</label><input id="choice2" name="choice2" class="form-control" type="text">
+	<label for="choice3">선택지3:</label><input id="choice3" name="choice3" class="form-control" type="text">
+	<label for="choice4">선택지4:</label><input id="choice4" name="choice4" class="form-control" type="text">
+	<label for="choice5">선택지5:</label><input id="choice5" name="choice5" class="form-control" type="text">
+	<input type="submit" class="btn btn-default">
+</form>
+
+
+
+{% endblock %}

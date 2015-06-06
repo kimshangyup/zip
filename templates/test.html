@@ -1,0 +1,15 @@
+
+
+
+hello
+
+
+{% for i in nn %}
+{{i.text}}
+{% endfor %}
+
+<form action="/test/write/" method="POST">
+{% csrf_token %}
+	<input type="text" name="text">
+	<button type="submit">submit</button>
+</form>

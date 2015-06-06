@@ -1,0 +1,74 @@
+{% extends 'buddy.html' %}
+
+{% block head %}
+
+<style>
+	
+	.col-md-offset-3{
+		border:1px solid lightgray;
+		background-color: white;
+	}
+
+	body{
+		background-color: #eeeeee;
+	}
+	span{
+		font-size:13px;
+		color:gray;
+	}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="col-md-6 col-md-offset-3">
+<h2>Welcome to Seoul Buddy</h2>
+<p>저희는 멋진 외국인 친구를 소개해드리고 싶은 서울대학교 학생들입니다.<br>We are students from Seoul National University who want to help you meet nice Korean friends!</p>
+	
+
+	<form action="/createdetail/" method="POST">
+		<input type="hidden" value="{{ request.user.username }}" name="username">
+
+		<label for="name">이름 Full name 姓名:</label>
+		<input class="form-control" id="name" type="text" name="name">
+		
+		<label for="gender">성별 Gender 性別:</label>
+		남<input id="gender" type="radio" name="gender" value="남">
+		여<input id="gender" type="radio" name="gender" value="여"><br>
+
+			<label for="age">국적 Nationality 国贼<span><br>(ex.한국인의 경우 '한국')</span>:</label>
+		<input class="form-control" id="nationality" type="text" name="nationality">
+
+			<label for="age">언어 Language 語言:</label>
+		<input class="form-control" id="language" type="text" name="language">
+	
+			<label for="age">나이 Age 年齡:</label>
+		<input class="form-control" id="age" type="text" name="age">
+
+
+		<label for="occuapation">하는 일 Occupation 职业:</label>
+		<input class="form-control" id="occuapation" type="text" name="occupation">
+
+		<label for="kakao">카카오톡 ID Kakaotalk ID:</label>
+		<input class="form-control" id="username" type="text" name="kakao">
+
+	
+		
+		<label for="address">지금 사는 곳 Location 地址:</label>
+		<input class="form-control" id="address" type="text" name="address">
+
+<label for="channel">무엇을 통해 서울버디를 알게 되셨나요?<br><span>(ex.페북)</span></label>
+		<input class="form-control" id="introduce" type="text" name="channel">
+
+		<label for="introduce">간단한 자기소개 Introduction 介紹:</label>
+		<input class="form-control" id="preference" type="text" name="introduce">
+		<label for="preference">선호조건 Preference 希望調件:<br><span>매칭 시 바라는 점</span></label>
+		<input class="form-control" id="kakao" type="text" name="preference">
+
+		<button class="btn btn-primary" type="submit">완료</button>	
+	</form>
+</div>
+{% endblock %}
+
+
+

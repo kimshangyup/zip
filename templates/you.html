@@ -1,0 +1,163 @@
+
+<html>
+<head>
+	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<title>동문 기반 크라우드펀딩 플랫폼</title>
+<style>
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+	*{
+		font-family: "Nanum Gothic","nanumgothic" sans-serif;
+	}
+	a{
+		color:#000099;
+	}
+	.navbar-default{
+		background-image:linear-gradient(to bottom,#23b300,0,#23b300 100%);
+	}
+	.navbar-default .navbar-nav>li>a{
+				color:white;
+	}
+	.navbar-default .navbar-nav>li>a:hover{
+		color:yellow;
+	}
+	body{
+		background-color:#f9f9f9;
+		background-image:url('/static/so2.jpg');
+		background-repeat: no-repeat;
+		background-size:100%;
+
+	}
+	.col-md-4{
+		margin-top:50px;
+	}
+	.navbar-default .navbar-brand{
+		color:white;
+	}
+	.navbar-default .navbar-brand:hover{
+		color:yellow;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color:white;
+
+	}
+	.panel-body:hover{
+		background-color:gray;
+	}
+	li{
+		list-style-type: none;
+		display:inline-block;
+	}
+	
+	li>a{
+		color:white;
+		margin-left:40px;
+	}
+	a{
+		color:darkgray;
+	}
+	ul{
+		color:white;
+	}
+	img{
+		width:100%;
+	}
+	.col-md-8{
+		text-align: center;
+	}
+	.white{
+		color:white;
+	}
+	.col-md-11{
+		position:fixed;
+		z-index:2;
+	}
+	.fa{
+		font-size:84px;
+	}
+</style>
+
+</head>
+<body>
+
+
+<div class="col-md-11">
+
+<h3 class="white">soWE, 대학생 소셜벤처 크라우드펀딩 플랫폼</h3>
+
+<br>
+
+<ul>
+	<li><a href="#sv">소셜벤처 둘러보기</a></li>
+	<li><a href="/my/">프로젝트 만들기</a></li>
+	<li><a href="javascript:alert('준비중입니다')">학생 소셜벤처란?</a></li>
+
+</ul>
+
+</div>
+<hr>
+
+<div class="col-md-8 col-md-offset-2">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 class="white">동문 후배들이 만든 소셜 벤처에 기부하세요!</h1><p class="white">이 사이트는 서울대학교 경영학과 김수욱 교수님의 '사회적 기업의 창업' 수업 프로젝트의 일환으로 시작되었습니다.</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<div class="col-md-4"><i class="fa fa-users"></i><br>서울대학교 출신 선배님들이 후배들을 지원해주는 곳입니다</div>
+<div class="col-md-4"><i class="fa fa-usd"></i><br>이 프로젝트 역시 소셜벤처이며 수익금의 전액은 소셜 벤처 진흥에 쓰입니다</div>
+<div class="col-md-4"><i class="fa fa-heart"></i><br>소셜 임팩트 투자를 하는 것 역시 가능합니다</div><br><br><br><br><br>
+<br><br><br><br><br>
+<h3>외국인들이 더 나은 한국을 경험하도록, 서울버디</h3>
+<img src="/static/so3.jpeg" alt="">
+<h3>정직한 재료로 건강을 전달한다, 어니스트 아보카도</h3>
+<img src="/static/so4.jpg" alt="">
+<h3>잠깐 살아도 방을 찾을 수 있어요, 집토스</h3>
+<img src="/static/so5.jpg" alt="">
+
+
+<h1 id="sv">서울대학생들이 시작한 소셜 벤처 프로젝트</h1>
+
+
+{% for i in cb %}
+<a href="/{{i.id}}">
+<div class="col-md-3">
+<div class="panel panel-default">
+	<div class="panel-body">
+<img src="/static/w{{i.id}}.jpg" alt="">
+<h4>{{i.title}}</h4>
+<h6>{{i.text1}}</h6>
+<h6>모금기간: D-3</h6>
+<h6>달성률: 60%</h6>
+	</div>
+</div>
+</div>
+</a>
+{% endfor %}
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

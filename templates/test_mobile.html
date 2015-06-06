@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+
+<style>
+	
+	#date{
+		text-align:right;
+	}
+	#today{
+		color:blue;
+	}
+</style>
+
+
+</head>
+<body>
+
+	<div data-role="page">
+	
+<div data-role="header" data-theme="b">
+<h2>오늘의 경영대 인트라넷 공지사항</h2>
+</div>	
+<div id="date">
+오늘의 날짜: {{today}}
+</div>
+<div data-role="main">
+	
+<h3 id="today">오늘의 공지</h3>
+<ul data-role="listview">
+{% for key, value in urllist.items %}
+<li><a href="http://cba.snu.ac.kr{{value}}">{{key}}</a></li>
+{% endfor %}
+</ul>
+
+<h3>지난 공지</h3>
+
+<ul data-role="listview" data-filter="true">
+{% for key, value in urllistold.items %}
+<li><a href="http://cba.snu.ac.kr{{value}}">{{key}}</a></li>
+{% endfor %}
+</ul>
+
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href='http://fonts.googleapis.com/css?family=Exo|Exo+2|Play' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='http://api.mobilis.co.kr/webfonts/v2/css/BM-HANNAWeb'
+        rel='stylesheet' type='text/css' />
+	<style>
+	span, .fa{
+		font-size:84px;
+	}
+	#footer>.fa{
+		font-size:24px;
+
+	}
+	li{
+		list-style-type: none;
+		display: inline-block;
+
+		}
+	
+	.jumbotron{
+		padding:40px;
+	}
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+	body{
+		font-family:'Nanumgothic', serif;
+	}
+	.row1,.row2,.row3, .row{
+		height:auto;
+		padding:20px;
+		text-align: center;
+	}
+	.row1{
+		background-color:#ffffff;
+
+	}
+	.row2{
+		background-color: #cccccc;
+	}
+	.row3{
+		background-color: #800020;
+		color:white;
+	}
+	#footer{
+		height:100px;
+		background-color:#4b4b4b;
+		padding:20px;
+		color:white;
+		text-align:center;
+	}
+	.navbar-default{
+		background-image:linear-gradient(to bottom,#800020 0,#800020 100%);
+		border-color:#800020;
+
+
+	}
+	.navbar-default .navbar-nav>li>a{
+		color:white;
+	}
+	.navbar-default .navbar-brand{
+		color:white;
+	}
+	
+	</style>
+
+
+{% block head %}
+
+{% endblock %}
+</head>
+<body>
+	
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/buddy/">서울버디</a>
+    </div>
+
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+        <li><a href="/buddy/intro/">서울버디란? <span class="sr-only">(current)</span></a></li>
+        <li><a href="/buddy/procedure/">이용절차</a></li>
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      	{% if request.account.is_authenticated %}
+      	<li><a href="/detail/">환영합니다! {{ request.account.username }}님</a></li>
+      	<li><a href="/detail/">내 프로필 수정하기</a></li>
+      	<li><a href="/logout/">Logout</a></li>
+		{% else %}
+		<li><a href="/signup/">회원가입</a></li>
+		<li><a href="/login/">로그인</a></li>
+		{% endif %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+<div class="container">
+{% block body %}
+
+{% endblock %}
+</div>
+
+
+
+<div id="footer">
+	copyright@kimshangyup<br><br>
+	<i class="fa fa-twitter"></i>&nbsp;&nbsp;
+	<i class="fa fa-facebook-official"><a href="https://www.facebook.com/pages/%EC%84%9C%EC%9A%B8-%EB%B2%84%EB%94%94-Seoul-buddy/337355686471823?ref=bookmarks"></a></i>&nbsp;&nbsp;
+	<i class="fa fa-linkedin"></i><br><br>
+</div>
+
+
+</body>
+</html>
